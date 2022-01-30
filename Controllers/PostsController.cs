@@ -22,13 +22,25 @@ namespace Test.Controllers
         }
 
         // GET: api/Posts
+        /// <summary>
+        /// Returns a list of the users’ tweets along with their related comments 
+        /// </summary>
+        /// <returns>
+        /// list of posts
+        /// </returns>
         [HttpGet]
         public IEnumerable<Post> GetPosts()
         {
+            var num = 0;
+            num = 100 / num;
+
             return repo.getUserTweets();
         }
 
         // POST: api/Posts/tweet
+        /// <summary>
+        /// Post a new comment for the user
+        /// </summary>
         [HttpPost("tweet", Name = "PostTweet")]
         public IActionResult PostTweet([FromBody] CreatePost post)
         {
@@ -43,6 +55,9 @@ namespace Test.Controllers
         }
 
         // POST: api/Posts/comments
+        /// <summary>
+        /// Writes a new comment 
+        /// </summary>
         [HttpPost("comment", Name = "PostComment")]
         public IActionResult PostComment([FromBody] CreateComment comment)
         {

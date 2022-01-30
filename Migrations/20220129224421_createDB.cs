@@ -31,7 +31,7 @@ namespace Test.Migrations
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     content = table.Column<string>(nullable: true),
-                    deleted_at = table.Column<DateTime>(nullable: false),
+                    deleted_at = table.Column<DateTime>(nullable: true),
                     created_at = table.Column<DateTime>(nullable: false),
                     updated_at = table.Column<DateTime>(nullable: false),
                     user_idid = table.Column<int>(nullable: true)
@@ -54,7 +54,7 @@ namespace Test.Migrations
                     id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     content = table.Column<string>(nullable: true),
-                    deleted_at = table.Column<DateTime>(nullable: false),
+                    deleted_at = table.Column<DateTime>(nullable: true),
                     created_at = table.Column<DateTime>(nullable: false),
                     updated_at = table.Column<DateTime>(nullable: false),
                     post_idid = table.Column<int>(nullable: true),
