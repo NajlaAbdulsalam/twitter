@@ -19,7 +19,6 @@ namespace Test.Models
         public string content { get; set; }
         [Required]
         public DateTime? deleted_at { get; set; }
-        [Required]
         public DateTime created_at { get; set; }
         [Required]
         public DateTime updated_at { get; set; }
