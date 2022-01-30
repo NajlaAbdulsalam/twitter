@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Test.Models;
 using Test.Models.Repositories;
 
@@ -31,9 +26,6 @@ namespace Test.Controllers
         [HttpGet]
         public IEnumerable<Post> GetPosts()
         {
-            var num = 0;
-            num = 100 / num;
-
             return repo.getUserTweets();
         }
 

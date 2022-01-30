@@ -67,6 +67,7 @@ namespace Test
             }
 
             app.UseHttpsRedirection();
+            app.UseMiddleware<ExceptionHandlerMiddleware>();
             app.UseMvc();
 
             app.UseSwagger();
@@ -77,7 +78,6 @@ namespace Test
                 options.RoutePrefix = "";
             });
 
-            app.UseMiddleware<ExceptionHandlerMiddleware>();
         }
     }
 }
